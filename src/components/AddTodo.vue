@@ -17,7 +17,11 @@ export default {
   },
   methods: {
     addTodo(e) {
-      this.$emit('add-todo', e.target.value)
+      // mutation
+      // this.$store.commit('ADD_TODO', e.target.value)
+      // actions
+      this.$store.dispatch('addTodo', e.target.value)
+      this.todoText = ''
     }
   }
 }
