@@ -1,7 +1,7 @@
 <template>
   <div>
     Completed Todo: {{ NumberOfCompletedTodo}}
-    <!-- {{ todos }} -->
+    {{todos}}
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   computed: {
     todos() {
-      return this.$store.state.todos;
+      return this.$store.state.todos
     },
     NumberOfCompletedTodo() {
       return this.todos.filter(todo => todo.checked).length

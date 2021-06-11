@@ -19,14 +19,12 @@ export default new Vuex.Store({
       })
     },
     TOGGLE_TODO(state, {id, checked}) {
-      console.log(id, checked)
       const index = state.todos.findIndex(todo => {
         return todo.id === id;
       })
       state.todos[index].checked = checked
     },
-    DELETE_TODO(state, todoId) {
-      // case 01
+    DELELTE_TODO(state, todoId) {
       const index = state.todos.findIndex(todo => {
         return todo.id === todoId
       })
@@ -34,7 +32,7 @@ export default new Vuex.Store({
 
       // case 02
       // state.todos = state.todos.filter(todo => todo.id !== id)
-    }
+    },
   },
   actions: { // 보통 비동기 작업을 하고 state data를 변경할 때
     addTodo({ commit }, value) {
