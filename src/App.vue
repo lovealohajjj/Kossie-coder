@@ -5,6 +5,7 @@
     <AddTodo />
     <hr>
     <TodoList />
+    <hr>
     <UserList />
     <hr>
     <div>
@@ -30,7 +31,7 @@ export default {
   },
   data() {
     return {
-      todoText: '',
+      // todoText: '',
     }
   },
   methods: {

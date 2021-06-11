@@ -40,7 +40,7 @@ export default new Vuex.Store({
     },
   },
   actions: { // 보통 비동기 작업을 하고 state data를 변경할 때
-    getUsers({ commit}) {
+    getUsers({ commit }) {
       axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
         commit('SET_USERS', res.data)
       })
@@ -57,6 +57,7 @@ export default new Vuex.Store({
       }, 1000)
     },
     deleteTodo({ commit }, todoId) {
+      console.log('a')
       setTimeout(() => {
         commit('DELETE_TODO', todoId)
       }, 1000)
