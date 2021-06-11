@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -8,9 +9,13 @@ export default new Vuex.Store({
     todos: [
       { id: 1, text: 'buy a car', checked: false },
       { id: 2, text: 'buy a pants', checked: false },
-    ]
+    ],
+    users: []
   },
   mutations: {
+    SET_USERS(state, users) {
+      state.users = users
+    },
     ADD_TODO(state, value) {
       state.todos.push({
         id: Math.random(),
@@ -35,8 +40,13 @@ export default new Vuex.Store({
     },
   },
   actions: { // 보통 비동기 작업을 하고 state data를 변경할 때
+    getUsers({ commit}) {
+      axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
+        commit('SET_USERS', res.data)
+      })
+
+    },
     addTodo({ commit }, value) {
-      console.log(value)
       setTimeout(() => {
         commit('ADD_TODO', value)
       }, 1000);
