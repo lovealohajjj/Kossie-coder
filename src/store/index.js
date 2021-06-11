@@ -5,6 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    todos: [
+      { id: 1, text: 'buy a car', checked: false },
+      { id: 2, text: 'buy a pants', checked: false },
+    ]
   },
   mutations: {
   },
