@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      todoText: '',
+      // todoText: '',
     }
   },
   methods: {
