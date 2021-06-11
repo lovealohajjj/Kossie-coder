@@ -8,20 +8,19 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  data() {
-    return {
-      users: []
+  created() {
+    this.getUsers()
+  },
+  computed: {
+    users() {
+      return this.$store.state.users
     }
   },
-  created() {
-    axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
-      // console.log(res)
-      this.users = res.data
-    })
-    const a = 1;
-    console.log(a)
+  methods: {
+    getUsers() {
+      this.$store.dispatch('getUsers')
+    }
   }
 }
 </script>

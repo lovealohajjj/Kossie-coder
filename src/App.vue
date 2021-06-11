@@ -6,6 +6,12 @@
     <hr>
     <TodoList />
     <UserList />
+    <hr>
+    <div>
+      <strong>dummy data</strong>
+      <br>
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank">https://jsonplaceholder.typicode.com/</a>
+    </div>
   </div>
 </template>
 
