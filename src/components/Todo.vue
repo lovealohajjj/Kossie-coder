@@ -28,18 +28,18 @@ export default {
   },
   computed: {
     NumberOfCompletedTodo() {
-      return this.$store.getters.NumberOfCompletedTodo
+      return this.$store.getters['todo/NumberOfCompletedTodo']
     }
   },
   methods: {
     toggleCheckbox(e) {
-      this.$store.dispatch('toggleTodo', {
+      this.$store.dispatch('todo/toggleTodo', {
         id: this.todo.id,
         checked: e.target.checked
       })
     },
     clickDelete() {
-      this.$store.dispatch('deleteTodo', this.todo.id)
+      this.$store.dispatch('todo/deleteTodo', this.todo.id)
     }
   }
 }
