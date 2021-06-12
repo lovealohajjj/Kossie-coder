@@ -1,26 +1,23 @@
 <template>
   <div>
-    User List
-    <div v-for="user in users" :key="user.id">
-      {{ user.name }}
-    </div>
+    User List <br>
+    <span v-for="user in users" :key="user.id">
+      {{ user.name }}, 
+    </span>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   created() {
     this.getUsers()
   },
   computed: {
-    users() {
-      return this.$store.state.users
-    }
+    ...mapState(['users'])
   },
   methods: {
-    getUsers() {
-      this.$store.dispatch('getUsers')
-    }
+    ...mapActions(['getUsers'])
   }
 }
 </script>
