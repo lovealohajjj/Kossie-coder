@@ -14,10 +14,12 @@ export default {
     this.getUsers()
   },
   computed: {
-    ...mapState(['users'])
+    ...mapState({
+      users: state => state.user.users
+    })
   },
   methods: {
-    ...mapActions(['getUsers'])
+    ...mapActions('user', ['getUsers'])
   }
 }
 </script>
