@@ -13,6 +13,10 @@
       <br>
       <a href="https://jsonplaceholder.typicode.com/" target="_blank">https://jsonplaceholder.typicode.com/</a>
     </div>
+    <hr>
+    <div>
+      <a href="https://vuex.vuejs.org/kr/guide/getters.html">Vuex Getters</a>
+    </div>
   </div>
 </template>
 
