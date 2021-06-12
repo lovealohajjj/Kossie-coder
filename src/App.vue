@@ -5,6 +5,7 @@
     <AddTodo />
     <hr>
     <TodoList />
+    <hr>
     <UserList />
     <hr>
     <div>
