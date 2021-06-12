@@ -29,7 +29,7 @@ export default new Vuex.Store({
       })
       state.todos[index].checked = checked
     },
-    DELELTE_TODO(state, todoId) {
+    DELETE_TODO(state, todoId) {
       const index = state.todos.findIndex(todo => {
         return todo.id === todoId
       })
